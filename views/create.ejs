@@ -1,0 +1,23 @@
+<%- include("header") -%>
+
+<form action="/create" method="post">
+    <div id="createCard">
+        <input id="createtopic" type="text" placeholder="topic" name="topic">
+        <textarea onkeyup="addingNote(event)" id="createnote" type="text" placeholder="note" name="note"></textarea>
+        <div id="noteOutput"></div>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+<script>
+    var note = document.getElementById("createnote")
+    var noteOutput = document.getElementById("noteOutput")
+    function addingNote(event){
+        console.log("this is working")
+        console.log(event.target)
+        noteOutput.innerHTML = marked(event.target.value)
+
+    }
+</script>
+
+<%- include("footer") -%>
