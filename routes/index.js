@@ -29,7 +29,6 @@ router.get("/", function(req, res, next){
     if(!err){
       res.render('index', {
         cardList: card,
-        marked: marked
       })
     } else {
       console.log(err)
