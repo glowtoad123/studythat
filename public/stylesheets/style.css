@@ -303,7 +303,7 @@ img {
   margin: 5px;
 }
 
-.bigNote {
+#bigNote {
   width: -webkit-fill-available;
   width: -moz-available;
   height: 150px;
@@ -312,11 +312,11 @@ img {
   font-weight: bold;
 }
 
-.bigNote:hover {
+#bigNote:hover {
   overflow-y: scroll;
 }
 
-.bigNote>ul>li {
+#bigNote>ul>li {
   text-align: center;
   flex-direction: column;
   background-color: #3b5a88;
